@@ -22,7 +22,7 @@ namespace DSATrees
             return null;
         }
 
-        public ConversationNode Find(ConversationNode current, string Phrase)
+        public ConversationNode? Find(ConversationNode current, string Phrase)
         {
             if (current != null)
             {
@@ -32,9 +32,7 @@ namespace DSATrees
                 }
                 else if (current.children.Count() > 0)
                     foreach (ConversationNode node in current.children)
-                        if (node.phrase != Phrase)
-                            Find(node, Phrase);
-                        else return node;
+                           return Find(node, Phrase);
             }
             return null;
         }

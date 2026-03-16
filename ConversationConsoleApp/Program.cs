@@ -16,6 +16,8 @@ namespace ConversationConsoleApp
 
             //ConversationNode phrase = conversataion.Find(conversataion.root, "None of your Business");
             conversation.InsertAfter("None of your Business", "How rude");
+            conversation.InsertAfter( "How rude","Bye");
+
 
             ConversationNode current = conversation.root;
             // Assume the computer starts the coversation
